@@ -4,11 +4,11 @@ import java.math.BigDecimal;
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class PipsTest {
+public class PipsAppTest {
 
     @Test
     public void testFF_FFPPqq() {
-        PipsApp app = new PipAapp();
+        PipsApp app = new PipsApp();
 
         assertEquals(bd("0.000000"), app.pips.zero);
         assertEquals(bd("0.000001"), app.pips.epsilon);
@@ -28,7 +28,7 @@ public class PipsTest {
 
 	BigDecimal price = bd("56.781250");
 
-        assertEquals(bd("0.001250"), app.pips.getApp.Pips(price));
+        assertEquals(bd("0.001250"), app.pips.getPips(price));
         assertEquals(bd("56.780000"), app.pips.getBigFigure(price));
 
 	assertEquals(bd("56.781275"), app.pips.up(price));
@@ -37,9 +37,9 @@ public class PipsTest {
 	assertEquals("down", bd("56.781225"), app.pips.down(price));
 	assertEquals("down+", bd("56.781125"), app.pips.down(price, 5));
 
-	assertEquals(bd("0.001000"), app.pips.expandApp.Pips("1"));
-	assertEquals(bd("0.001200"), app.pips.expandApp.Pips("12"));
-	assertEquals(bd("0.001230"), app.pips.expandApp.Pips("123"));
+	assertEquals(bd("0.001000"), app.pips.expandPips("1"));
+	assertEquals(bd("0.001200"), app.pips.expandPips("12"));
+	assertEquals(bd("0.001230"), app.pips.expandPips("123"));
 	assertEquals(bd("0.001235"), app.pips.expandPips("1235"));
     }
 
@@ -47,3 +47,4 @@ public class PipsTest {
         return new BigDecimal(s);
     }
 }
+
