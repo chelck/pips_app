@@ -68,14 +68,14 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.8.1</version>
+      <version>4.12-beta-3</version>
       <scope>test</scope>
     </dependency>
     
       <dependency>
         <groupId>com.icap</groupId>
         <artifactId>pips</artifactId>
-        <version>1.32</version>
+        <version>1.33</version>
       </dependency>
   </dependencies>
 
